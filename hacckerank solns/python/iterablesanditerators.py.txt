@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+n = int(raw_input())
+lst = raw_input().split()
+indices = [x for x in range(0,len(lst))]
+a_indices = [x for x in range(0,len(lst)) if lst[x]=='a']
+m = int(raw_input())
+comb = list(combinations(indices,m))
+count=0
+for i in comb:
+    for j in a_indices:
+        if(j in i):
+            count = count+1
+            break 
+print(1.0*count/len(comb))  

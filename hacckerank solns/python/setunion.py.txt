@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(raw_input())
+english = raw_input().split()
+b = int(raw_input())
+french = raw_input().split()
+s= set(english).union(set(french))
+print(len(s))

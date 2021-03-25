@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+cost=0
+n = int(raw_input())
+shoesizes = raw_input().split(" ")
+shoecollection = Counter(shoesizes)
+customers = int(raw_input())
+for i in range(0,customers):
+    size,price = raw_input().split(" ")
+    if size in shoecollection.keys():
+        if shoecollection[size]!=0:
+            cost += int(price)
+            shoecollection[size]-=1
+print(cost)
+
+

@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import product
+A=[]
+B=[]
+A=raw_input().split(" ")
+B=raw_input().split(" ")
+A=map(int,A)
+B=map(int,B)
+C=[]
+C.append(A)
+C.append(B)
+C=list(product(*C))
+C = ['(%s, %s)' % tuple for tuple in C]
+result = ' '.join(C)
+print(result)

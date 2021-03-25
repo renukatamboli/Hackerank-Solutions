@@ -1,0 +1,6 @@
+n = int(raw_input())
+columns=raw_input().split()
+sum=0
+for i in range(n):
+    sum = sum+int(raw_input().split()[columns.index('MARKS')])
+print(sum*1.0/n)

@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict
+ordinary_dictionary = OrderedDict()
+for i in range(int(raw_input())):
+    string = raw_input()
+    item = string[0:string.rfind(' ')]
+    num = string[string.rfind(' ')+1:]
+    if item in ordinary_dictionary.keys():
+        ordinary_dictionary[item] = ordinary_dictionary[item]+int(num)
+    else:
+        ordinary_dictionary[item] = int(num)
+for k,v in ordinary_dictionary.iteritems():
+    print k+" "+str(v)

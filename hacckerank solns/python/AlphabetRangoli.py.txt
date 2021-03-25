@@ -1,0 +1,17 @@
+def print_rangoli(size):
+    for i in [x for x in range(-size,size+1) if x != 0 and x!=1]:
+        str=''
+        j=size
+        for j in range(size,abs(i),-1):
+            str+=chr(j+96)
+            str+='-'            
+        str+=chr(abs(i)+96)
+        for j in range(abs(i)+1,size+1):
+            str+='-'
+            str+=chr(j+96)
+                
+        
+        print(str.center(4*size-3,'-'))    
+    # your code goes here
+
+if __name__ == '__main__':
