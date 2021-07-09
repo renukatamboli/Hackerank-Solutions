@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n,m = map(int,input().split())
+lst = []
+for i in range(0,m):
+    lst.append(list(map(float,input().split())))
+for i in zip(*lst):
+    print(sum(list(i))/m)
